@@ -25,7 +25,7 @@ Quando navego até adicionar funcinario
     Sleep   2s
 
 E preencho nome e sobrenome
-    Input Text     ${NOME}    ManoT
+    Input Text     ${NOME}    Mano
     Sleep   1s
     Input Text     ${SOBRENOME}     Caio
     Sleep   1s
@@ -39,7 +39,7 @@ E clico no check para abrir infomacoes
     Sleep   1s
 
 E preencho nome de usuario com “mano.caio“
-    Input Text     ${USARNAMEFUNCIONARIO}    mano.caiot
+    Input Text     ${USARNAMEFUNCIONARIO}    mano.caioqa22
     Sleep   1s
 
 E senha
@@ -49,8 +49,8 @@ E repetir senha
     Input Text      ${PASSWORDFUNCIONARIOCONFIRM}     mano.caio@2S
     Sleep   1s
 Quando clico em salvar
-    Click Button      ${BTNSAVEFUNCIONARIO}  
-    Sleep   1s
+    Click Button     ${BTNSAVEFUNCIONARIO}  
+    Sleep   4s
 
 Então devo ver a mnesagem de “Personal Details“
     Page Should Contain    Personal Details 

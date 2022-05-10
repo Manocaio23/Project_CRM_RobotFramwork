@@ -1,246 +1,459 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.8.10 on linux)" generated="20220508 21:53:08.501" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.8.10 on linux)" generated="20220510 12:50:34.675" rpa="false" schemaversion="3">
 <suite id="s1" name="Crm" source="/home/caio-celk/Documentos/Project-CRM-RobotFramework/Tests/OrangeHrm/crm.robot">
-<test id="s1-t1" name="Fazer login tela inicial normalmente" line="15">
+<test id="s1-t1" name="Gerenciamento de usuário - Criar Fundionário" line="16">
 <kw name="Start Test" library="Start_Stop" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url.${site}}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220508 21:53:08.645" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220508 21:53:08.644" endtime="20220508 21:53:11.933"/>
+<msg timestamp="20220510 12:50:34.819" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220510 12:50:34.818" endtime="20220510 12:50:37.694"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220508 21:53:11.934" endtime="20220508 21:53:12.039"/>
+<status status="PASS" starttime="20220510 12:50:37.694" endtime="20220510 12:50:37.798"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:16.040" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20220508 21:53:12.039" endtime="20220508 21:53:16.040"/>
+<msg timestamp="20220510 12:50:41.799" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220510 12:50:37.798" endtime="20220510 12:50:41.799"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:08.643" endtime="20220508 21:53:16.041"/>
+<status status="PASS" starttime="20220510 12:50:34.817" endtime="20220510 12:50:41.800"/>
 </kw>
 <kw name="Dado que esteja logado no sistema" library="LoginPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${SearchTextBox}</arg>
 <arg>Admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:16.045" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
-<status status="PASS" starttime="20220508 21:53:16.043" endtime="20220508 21:53:16.148"/>
+<msg timestamp="20220510 12:50:41.804" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20220510 12:50:41.802" endtime="20220510 12:50:41.899"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Senha}</arg>
 <arg>admin123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:16.149" level="INFO">Typing text 'admin123' into text field 'txtPassword'.</msg>
-<status status="PASS" starttime="20220508 21:53:16.148" endtime="20220508 21:53:16.225"/>
+<msg timestamp="20220510 12:50:41.900" level="INFO">Typing text 'admin123' into text field 'txtPassword'.</msg>
+<status status="PASS" starttime="20220510 12:50:41.899" endtime="20220510 12:50:41.974"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${SearchButton}</arg>
 <arg>[Return]</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220508 21:53:16.226" level="INFO">Sending key(s) ('[Return]',) to btnLogin element.</msg>
-<msg timestamp="20220508 21:53:19.369" level="INFO">Sending keys [Return]</msg>
-<status status="PASS" starttime="20220508 21:53:16.226" endtime="20220508 21:53:19.379"/>
+<msg timestamp="20220510 12:50:41.975" level="INFO">Sending key(s) ('[Return]',) to btnLogin element.</msg>
+<msg timestamp="20220510 12:50:45.293" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20220510 12:50:41.974" endtime="20220510 12:50:45.306"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:21.380" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220508 21:53:19.380" endtime="20220508 21:53:21.380"/>
+<msg timestamp="20220510 12:50:47.307" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220510 12:50:45.306" endtime="20220510 12:50:47.307"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:16.041" endtime="20220508 21:53:21.381"/>
+<status status="PASS" starttime="20220510 12:50:41.801" endtime="20220510 12:50:47.308"/>
 </kw>
 <kw name="Quando navego até adicionar funcinario" library="FuncionarioPage">
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>${MENUPIM}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220508 21:53:21.383" level="INFO">Simulating Mouse Over on element 'id:menu_pim_viewPimModule'.</msg>
-<status status="PASS" starttime="20220508 21:53:21.382" endtime="20220508 21:53:21.704"/>
+<msg timestamp="20220510 12:50:47.310" level="INFO">Simulating Mouse Over on element 'id:menu_pim_viewPimModule'.</msg>
+<status status="PASS" starttime="20220510 12:50:47.309" endtime="20220510 12:50:47.623"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:23.705" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220508 21:53:21.704" endtime="20220508 21:53:23.705"/>
+<msg timestamp="20220510 12:50:49.625" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220510 12:50:47.624" endtime="20220510 12:50:49.625"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENUfUNCIONARIO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:23.707" level="INFO">Clicking element 'id:menu_pim_addEmployee'.</msg>
-<status status="PASS" starttime="20220508 21:53:23.706" endtime="20220508 21:53:24.470"/>
+<msg timestamp="20220510 12:50:49.626" level="INFO">Clicking element 'id:menu_pim_addEmployee'.</msg>
+<status status="PASS" starttime="20220510 12:50:49.625" endtime="20220510 12:50:50.329"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:26.471" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220508 21:53:24.470" endtime="20220508 21:53:26.471"/>
+<msg timestamp="20220510 12:50:52.331" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220510 12:50:50.330" endtime="20220510 12:50:52.331"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:21.381" endtime="20220508 21:53:26.472"/>
+<status status="PASS" starttime="20220510 12:50:47.308" endtime="20220510 12:50:52.332"/>
 </kw>
 <kw name="E preencho nome e sobrenome" library="FuncionarioPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${NOME}</arg>
-<arg>ManoT</arg>
+<arg>Mano</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:26.475" level="INFO">Typing text 'ManoT' into text field 'id:firstName'.</msg>
-<status status="PASS" starttime="20220508 21:53:26.474" endtime="20220508 21:53:26.584"/>
+<msg timestamp="20220510 12:50:52.334" level="INFO">Typing text 'Mano' into text field 'id:firstName'.</msg>
+<status status="PASS" starttime="20220510 12:50:52.333" endtime="20220510 12:50:52.449"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:27.585" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:26.584" endtime="20220508 21:53:27.585"/>
+<msg timestamp="20220510 12:50:53.450" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:52.449" endtime="20220510 12:50:53.450"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${SOBRENOME}</arg>
 <arg>Caio</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:27.587" level="INFO">Typing text 'Caio' into text field 'id:lastName'.</msg>
-<status status="PASS" starttime="20220508 21:53:27.586" endtime="20220508 21:53:27.814"/>
+<msg timestamp="20220510 12:50:53.451" level="INFO">Typing text 'Caio' into text field 'id:lastName'.</msg>
+<status status="PASS" starttime="20220510 12:50:53.450" endtime="20220510 12:50:53.651"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:28.815" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:27.814" endtime="20220508 21:53:28.815"/>
+<msg timestamp="20220510 12:50:54.652" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:53.651" endtime="20220510 12:50:54.652"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:26.472" endtime="20220508 21:53:28.817"/>
+<status status="PASS" starttime="20220510 12:50:52.332" endtime="20220510 12:50:54.652"/>
 </kw>
 <kw name="Quando insiro uma foto" library="FuncionarioPage">
 <kw name="Choose File" library="SeleniumLibrary">
 <arg>${UPLOAD}</arg>
 <arg>/home/caio-celk/Downloads/robo.jpeg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220508 21:53:28.821" level="INFO">Sending /home/caio-celk/Downloads/robo.jpeg to browser.</msg>
-<status status="PASS" starttime="20220508 21:53:28.819" endtime="20220508 21:53:29.077"/>
+<msg timestamp="20220510 12:50:54.653" level="INFO">Sending /home/caio-celk/Downloads/robo.jpeg to browser.</msg>
+<status status="PASS" starttime="20220510 12:50:54.653" endtime="20220510 12:50:54.706"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:30.077" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:29.077" endtime="20220508 21:53:30.078"/>
+<msg timestamp="20220510 12:50:55.707" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:54.706" endtime="20220510 12:50:55.707"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:28.817" endtime="20220508 21:53:30.078"/>
+<status status="PASS" starttime="20220510 12:50:54.652" endtime="20220510 12:50:55.708"/>
 </kw>
 <kw name="E clico no check para abrir infomacoes" library="FuncionarioPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CHECK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:30.081" level="INFO">Clicking element 'id:chkLogin'.</msg>
-<status status="PASS" starttime="20220508 21:53:30.080" endtime="20220508 21:53:30.163"/>
+<msg timestamp="20220510 12:50:55.710" level="INFO">Clicking element 'id:chkLogin'.</msg>
+<status status="PASS" starttime="20220510 12:50:55.709" endtime="20220510 12:50:55.791"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:31.164" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:30.163" endtime="20220508 21:53:31.164"/>
+<msg timestamp="20220510 12:50:56.791" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:55.791" endtime="20220510 12:50:56.792"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:30.079" endtime="20220508 21:53:31.165"/>
+<status status="PASS" starttime="20220510 12:50:55.708" endtime="20220510 12:50:56.792"/>
 </kw>
 <kw name="E preencho nome de usuario com “mano.caio“" library="FuncionarioPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${USARNAMEFUNCIONARIO}</arg>
-<arg>mano.caiot</arg>
+<arg>mano.caioqa22</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:31.167" level="INFO">Typing text 'mano.caiot' into text field 'id:user_name'.</msg>
-<status status="PASS" starttime="20220508 21:53:31.166" endtime="20220508 21:53:31.270"/>
+<msg timestamp="20220510 12:50:56.795" level="INFO">Typing text 'mano.caioqa22' into text field 'id:user_name'.</msg>
+<status status="PASS" starttime="20220510 12:50:56.794" endtime="20220510 12:50:56.906"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:32.270" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:31.270" endtime="20220508 21:53:32.271"/>
+<msg timestamp="20220510 12:50:57.906" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:56.906" endtime="20220510 12:50:57.907"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:31.165" endtime="20220508 21:53:32.271"/>
+<status status="PASS" starttime="20220510 12:50:56.793" endtime="20220510 12:50:57.907"/>
 </kw>
 <kw name="E senha" library="FuncionarioPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PASSWORDFUNCIONARIO}</arg>
 <arg>mano.caio@2S</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:32.274" level="INFO">Typing text 'mano.caio@2S' into text field 'id:user_password'.</msg>
-<status status="PASS" starttime="20220508 21:53:32.273" endtime="20220508 21:53:32.387"/>
+<msg timestamp="20220510 12:50:57.910" level="INFO">Typing text 'mano.caio@2S' into text field 'id:user_password'.</msg>
+<status status="PASS" starttime="20220510 12:50:57.909" endtime="20220510 12:50:58.196"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:33.388" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:32.388" endtime="20220508 21:53:33.389"/>
+<msg timestamp="20220510 12:50:59.196" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:58.196" endtime="20220510 12:50:59.197"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:32.272" endtime="20220508 21:53:33.389"/>
+<status status="PASS" starttime="20220510 12:50:57.908" endtime="20220510 12:50:59.197"/>
 </kw>
 <kw name="E repetir senha" library="FuncionarioPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PASSWORDFUNCIONARIOCONFIRM}</arg>
 <arg>mano.caio@2S</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:33.392" level="INFO">Typing text 'mano.caio@2S' into text field 'id:re_password'.</msg>
-<status status="PASS" starttime="20220508 21:53:33.391" endtime="20220508 21:53:33.503"/>
+<msg timestamp="20220510 12:50:59.200" level="INFO">Typing text 'mano.caio@2S' into text field 'id:re_password'.</msg>
+<status status="PASS" starttime="20220510 12:50:59.199" endtime="20220510 12:50:59.308"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:34.504" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:33.503" endtime="20220508 21:53:34.504"/>
+<msg timestamp="20220510 12:51:00.309" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:50:59.308" endtime="20220510 12:51:00.309"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:33.390" endtime="20220508 21:53:34.505"/>
+<status status="PASS" starttime="20220510 12:50:59.198" endtime="20220510 12:51:00.310"/>
 </kw>
 <kw name="Quando clico em salvar" library="FuncionarioPage">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${BTNSAVEFUNCIONARIO}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220508 21:53:34.507" level="INFO">Clicking button 'id:btnSave'.</msg>
-<status status="PASS" starttime="20220508 21:53:34.506" endtime="20220508 21:53:36.302"/>
+<msg timestamp="20220510 12:51:00.312" level="INFO">Clicking button 'id:btnSave'.</msg>
+<status status="PASS" starttime="20220510 12:51:00.312" endtime="20220510 12:51:02.151"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
+<arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:37.304" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:36.303" endtime="20220508 21:53:37.304"/>
+<msg timestamp="20220510 12:51:06.153" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220510 12:51:02.152" endtime="20220510 12:51:06.153"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:34.505" endtime="20220508 21:53:37.305"/>
+<status status="PASS" starttime="20220510 12:51:00.310" endtime="20220510 12:51:06.153"/>
 </kw>
 <kw name="Então devo ver a mnesagem de “Personal Details“" library="FuncionarioPage">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Personal Details</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220508 21:53:37.347" level="INFO">Current page contains text 'Personal Details'.</msg>
-<status status="PASS" starttime="20220508 21:53:37.306" endtime="20220508 21:53:37.347"/>
+<msg timestamp="20220510 12:51:06.200" level="INFO">Current page contains text 'Personal Details'.</msg>
+<status status="PASS" starttime="20220510 12:51:06.155" endtime="20220510 12:51:06.200"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220508 21:53:38.348" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220508 21:53:37.347" endtime="20220508 21:53:38.348"/>
+<msg timestamp="20220510 12:51:07.201" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:06.200" endtime="20220510 12:51:07.201"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:37.305" endtime="20220508 21:53:38.349"/>
+<status status="PASS" starttime="20220510 12:51:06.154" endtime="20220510 12:51:07.202"/>
 </kw>
 <kw name="Finish TestCase" library="Start_Stop" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220508 21:53:38.351" endtime="20220508 21:53:38.415"/>
+<status status="PASS" starttime="20220510 12:51:07.204" endtime="20220510 12:51:07.271"/>
 </kw>
-<status status="PASS" starttime="20220508 21:53:38.350" endtime="20220508 21:53:38.415"/>
+<status status="PASS" starttime="20220510 12:51:07.203" endtime="20220510 12:51:07.272"/>
 </kw>
-<doc>Vai fazer o login padrão</doc>
-<tag>Functional</tag>
-<status status="PASS" starttime="20220508 21:53:08.642" endtime="20220508 21:53:38.415"/>
+<doc>Fazer o cadastro de um funcionário</doc>
+<tag>CY001</tag>
+<status status="PASS" starttime="20220510 12:50:34.817" endtime="20220510 12:51:07.272"/>
+</test>
+<test id="s1-t2" name="Gerenciamento de usuário - Criar Usuário" line="32">
+<kw name="Start Test" library="Start_Stop" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url.${site}}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220510 12:51:07.276" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220510 12:51:07.274" endtime="20220510 12:51:09.883"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220510 12:51:09.883" endtime="20220510 12:51:09.989"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:13.991" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220510 12:51:09.990" endtime="20220510 12:51:13.991"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:07.274" endtime="20220510 12:51:13.992"/>
+</kw>
+<kw name="Dado que esteja logado no sistema" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchTextBox}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:13.995" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20220510 12:51:13.994" endtime="20220510 12:51:14.101"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Senha}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:14.102" level="INFO">Typing text 'admin123' into text field 'txtPassword'.</msg>
+<status status="PASS" starttime="20220510 12:51:14.101" endtime="20220510 12:51:14.175"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SearchButton}</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220510 12:51:14.175" level="INFO">Sending key(s) ('[Return]',) to btnLogin element.</msg>
+<msg timestamp="20220510 12:51:17.535" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20220510 12:51:14.175" endtime="20220510 12:51:17.545"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:19.545" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220510 12:51:17.545" endtime="20220510 12:51:19.545"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:13.993" endtime="20220510 12:51:19.546"/>
+</kw>
+<kw name="Quando navego ate gerenciamento de usuario" library="UsuarioPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU_ADMIN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220510 12:51:19.547" level="INFO">Simulating Mouse Over on element 'id:menu_admin_viewAdminModule'.</msg>
+<status status="PASS" starttime="20220510 12:51:19.546" endtime="20220510 12:51:19.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:20.843" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:19.842" endtime="20220510 12:51:20.843"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${SUBMENU_ADM}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220510 12:51:20.844" level="INFO">Simulating Mouse Over on element 'id:menu_admin_UserManagement'.</msg>
+<status status="PASS" starttime="20220510 12:51:20.843" endtime="20220510 12:51:21.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:22.158" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:21.157" endtime="20220510 12:51:22.159"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MENU_USER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:22.160" level="INFO">Clicking element 'id:menu_admin_viewSystemUsers'.</msg>
+<status status="PASS" starttime="20220510 12:51:22.159" endtime="20220510 12:51:23.225"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:24.226" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:23.225" endtime="20220510 12:51:24.227"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:19.546" endtime="20220510 12:51:24.227"/>
+</kw>
+<kw name="E clico em adicionar" library="UsuarioPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_ADD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:24.230" level="INFO">Clicking button 'id:btnAdd'.</msg>
+<status status="PASS" starttime="20220510 12:51:24.229" endtime="20220510 12:51:24.851"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:25.852" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:24.852" endtime="20220510 12:51:25.853"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:24.228" endtime="20220510 12:51:25.853"/>
+</kw>
+<kw name="Quando preencho a função como “administrador“" library="UsuarioPage">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${SELECT_USERROLE}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220510 12:51:25.856" level="INFO">Selecting options from selection list 'id:systemUser_userType' by value 1.</msg>
+<status status="PASS" starttime="20220510 12:51:25.855" endtime="20220510 12:51:25.946"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:26.947" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:25.947" endtime="20220510 12:51:26.947"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:25.854" endtime="20220510 12:51:26.948"/>
+</kw>
+<kw name="E nome do funcionario como “Mano Caio“" library="UsuarioPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FUNCIONARIO_USER}</arg>
+<arg>ManoT Caio</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:26.950" level="INFO">Typing text 'ManoT Caio' into text field 'id:systemUser_employeeName_empName'.</msg>
+<status status="PASS" starttime="20220510 12:51:26.950" endtime="20220510 12:51:27.082"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:28.083" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:27.082" endtime="20220510 12:51:28.083"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:26.949" endtime="20220510 12:51:28.084"/>
+</kw>
+<kw name="E nome do usuario como" library="UsuarioPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USER}</arg>
+<arg>funcionario</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:28.086" level="INFO">Typing text 'funcionario' into text field 'id:systemUser_userName'.</msg>
+<status status="PASS" starttime="20220510 12:51:28.085" endtime="20220510 12:51:28.199"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:29.200" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:28.200" endtime="20220510 12:51:29.200"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:28.084" endtime="20220510 12:51:29.201"/>
+</kw>
+<kw name="E preencho senha" library="UsuarioPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_PASSOWRD}</arg>
+<arg>mano.caioqa2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:29.203" level="INFO">Typing text 'mano.caioqa2' into text field 'id:systemUser_password'.</msg>
+<status status="PASS" starttime="20220510 12:51:29.202" endtime="20220510 12:51:29.400"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:30.401" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:29.400" endtime="20220510 12:51:30.401"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:29.201" endtime="20220510 12:51:30.401"/>
+</kw>
+<kw name="E congirmar senha" library="UsuarioPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_CONFIRMPASS}</arg>
+<arg>mano.caioqa2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:30.403" level="INFO">Typing text 'mano.caioqa2' into text field 'id:systemUser_confirmPassword'.</msg>
+<status status="PASS" starttime="20220510 12:51:30.402" endtime="20220510 12:51:30.509"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:31.509" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:30.509" endtime="20220510 12:51:31.510"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:30.402" endtime="20220510 12:51:31.510"/>
+</kw>
+<kw name="Quando clico em salvar para adicionar" library="UsuarioPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_SAVE}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220510 12:51:31.513" level="INFO">Clicking button 'id:btnSave'.</msg>
+<status status="PASS" starttime="20220510 12:51:31.512" endtime="20220510 12:51:31.598"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220510 12:51:32.599" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220510 12:51:31.598" endtime="20220510 12:51:32.599"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:31.511" endtime="20220510 12:51:32.599"/>
+</kw>
+<kw name="Finish TestCase" library="Start_Stop" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220510 12:51:32.602" endtime="20220510 12:51:32.681"/>
+</kw>
+<status status="PASS" starttime="20220510 12:51:32.600" endtime="20220510 12:51:32.682"/>
+</kw>
+<doc>Fazer o cadastro de um usuario</doc>
+<tag>CY002</tag>
+<status status="PASS" starttime="20220510 12:51:07.273" endtime="20220510 12:51:32.682"/>
 </test>
 <doc>Funcionalidade do projeto</doc>
-<status status="PASS" starttime="20220508 21:53:08.502" endtime="20220508 21:53:38.416"/>
+<status status="PASS" starttime="20220510 12:50:34.676" endtime="20220510 12:51:32.683"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="1" fail="0" skip="0">CY001</stat>
+<stat pass="1" fail="0" skip="0">CY002</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Crm">Crm</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Crm">Crm</stat>
 </suite>
 </statistics>
 <errors>

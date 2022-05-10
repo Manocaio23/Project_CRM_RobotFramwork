@@ -1,7 +1,9 @@
 *** Settings ***
 Documentation  Funcionalidade do projeto
+
 Resource  ../../Resources//PageObjects/LoginPage.robot
 Resource  ../../Resources//PageObjects/FuncionarioPage.robot
+Resource  ../../Resources//PageObjects/UsuarioPage.robot
 Resource  ../../Resources//Start_Stop.robot
 
 
@@ -12,9 +14,9 @@ Test Teardown   Start_Stop.Finish TestCase
 
 *** Test Cases ***
 
-Fazer login tela inicial normalmente
-    [Documentation]  Vai fazer o login padrão 
-    [tags]  Functional
+Gerenciamento de usuário - Criar Fundionário
+    [Documentation]  Fazer o cadastro de um funcionário
+    [tags]  CY001
     
     Dado que esteja logado no sistema 
     Quando navego até adicionar funcinario
@@ -28,3 +30,16 @@ Fazer login tela inicial normalmente
     Então devo ver a mnesagem de “Personal Details“
 
 
+Gerenciamento de usuário - Criar Usuário
+    [Documentation]  Fazer o cadastro de um usuario
+    [tags]  CY002
+    Dado que esteja logado no sistema 
+    Quando navego ate gerenciamento de usuario 
+    E clico em adicionar 
+    Quando preencho a função como “administrador“
+    E nome do funcionario como “Mano Caio“ 
+    E nome do usuario como
+    E preencho senha
+    E congirmar senha
+    Quando clico em salvar para adicionar
+    
