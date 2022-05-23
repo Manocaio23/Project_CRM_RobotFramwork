@@ -34,7 +34,7 @@ Quando preencho a função como “administrador“
     Sleep   1s
 
 E nome do funcionario como “Mano Caio“ 
-  Input Text   ${FUNCIONARIO_USER}    mano.caioqa2
+  Input Text   ${FUNCIONARIO_USER}    Alice Duval
   Sleep   1s
 E nome do usuario como 
   Input Text    ${INPUT_USER}    funcionario
