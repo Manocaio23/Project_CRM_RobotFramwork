@@ -32,7 +32,7 @@ E preencho nome e sobrenome
     
 
 Quando insiro uma foto
-    Choose File       ${UPLOAD}   /home/caio-celk/Downloads/robo.jpeg
+    Choose File       ${UPLOAD}   /Users/manocaio/Downloads/robo.jpeg
     Sleep   1s
 E clico no check para abrir infomacoes
     Click Element   ${CHECK}   
