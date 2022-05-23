@@ -39,7 +39,7 @@ E clico no check para abrir infomacoes
     Sleep   1s
 
 E preencho nome de usuario com “mano.caio“
-    Input Text     ${USARNAMEFUNCIONARIO}    mano.caioqa2
+    Input Text     ${USARNAMEFUNCIONARIO}    mano.caioqa28
     Sleep   1s
 
 E senha
