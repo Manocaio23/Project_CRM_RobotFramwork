@@ -34,7 +34,7 @@ Quando preencho a função como “administrador“
     Sleep   1s
 
 E nome do funcionario como “Mano Caio“ 
-  Input Text   ${FUNCIONARIO_USER}    mano.caioqa
+  Input Text   ${FUNCIONARIO_USER}    mano.caioqa2
   Sleep   1s
 E nome do usuario como 
   Input Text    ${INPUT_USER}    funcionario
@@ -48,6 +48,6 @@ E congirmar senha
      Sleep   1s
 Quando clico em salvar para adicionar
     Click Button  ${BTN_SAVE} 
-    Sleep   1s
+    Sleep   3s
 Então devo ver a mensagem de sucesso
     
